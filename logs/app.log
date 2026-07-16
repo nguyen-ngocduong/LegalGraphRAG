@@ -1,0 +1,59 @@
+2026-07-16 14:40:32,603 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 14:40:32,604 - [INFO] - ====== WebDriver manager ======
+2026-07-16 14:40:32,700 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 14:40:37,286 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 14:40:37,511 - [INFO] - Trang web đã tải xong.
+2026-07-16 14:43:39,828 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 14:43:39,829 - [INFO] - ====== WebDriver manager ======
+2026-07-16 14:43:39,926 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 14:43:42,438 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 14:43:45,130 - [INFO] - Trang web đã tải xong.2026-07-16 14:46:47,715 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 14:46:47,717 - [INFO] - ====== WebDriver manager ======
+2026-07-16 14:46:47,890 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 14:46:52,184 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 14:46:52,787 - [INFO] - Trang web đã tải xong.
+2026-07-16 14:46:54,020 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
+2026-07-16 14:46:59,022 - [INFO] - Kết quả tìm kiếm đã tải xong.
+2026-07-16 15:13:23,916 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 15:13:23,918 - [INFO] - ====== WebDriver manager ======
+2026-07-16 15:13:24,011 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 15:13:28,201 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 15:13:29,543 - [INFO] - Trang web đã tải xong.
+2026-07-16 15:13:30,859 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
+2026-07-16 15:13:35,860 - [INFO] - Kết quả tìm kiếm đã tải xong.
+2026-07-16 15:13:37,114 - [ERROR] - Không thể tìm kiếm nâng cao: Message: element click intercepted: Element <span class="ant-checkbox-label">...</span> is not clickable at point (611, 308). Other element would receive the click: <img alt="banner" fetchpriority="high" width="5461" height="5461" decoding="async" data-nimg="1" class="w-full h-full object-fill grayscale opacity-10" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTr%E1%BB%91ng_%C4%91%E1%BB%93ng_%C4%90%C3%B4ng_S%C6%A1n.c5fc784a.png&amp;w=3840&amp;q=75 1x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTr%E1%BB%91ng_%C4%91%E1%BB%93ng_%C4%90%C3%B4ng_S%C6%A1n.c5fc784a.png&amp;w=3840&amp;q=75" style="color: transparent;">
+  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+#0 0x63ff3c99fa6a <unknown>
+#1 0x63ff3c3aeab5 <unknown>
+#2 0x63ff3c40893b <unknown>
+#3 0x63ff3c406572 <unknown>
+#4 0x63ff3c403ab9 <unknown>
+#5 0x63ff3c402ba7 <unknown>
+#6 0x63ff3c3f6bb2 <unknown>
+#7 0x63ff3c3f64f7 <unknown>
+#8 0x63ff3c4497b6 <unknown>
+#9 0x63ff3c3f4cbf <unknown>
+#10 0x63ff3c3f5a81 <unknown>
+#11 0x63ff3c965a64 <unknown>
+#12 0x63ff3c968951 <unknown>
+#13 0x63ff3c95221e <unknown>
+#14 0x63ff3c96951e <unknown>
+#15 0x63ff3c938be0 <unknown>
+#16 0x63ff3c98c9b8 <unknown>
+#17 0x63ff3c98cb88 <unknown>
+#18 0x63ff3c99e4de <unknown>
+#19 0x72b2f389caa4 <unknown>
+#20 0x72b2f3929c6c <unknown>
+2026-07-16 15:18:18,299 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 15:18:18,300 - [INFO] - ====== WebDriver manager ======
+2026-07-16 15:18:18,369 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 15:18:22,154 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 15:18:23,229 - [INFO] - Trang web đã tải xong.
+2026-07-16 15:18:24,080 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
+2026-07-16 15:18:29,081 - [INFO] - Kết quả tìm kiếm đã tải xong.
+2026-07-16 15:18:30,487 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
+2026-07-16 15:18:31,049 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
+2026-07-16 15:18:32,253 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
+2026-07-16 15:18:33,109 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
+2026-07-16 15:18:33,584 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
