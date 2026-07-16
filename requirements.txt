@@ -1,0 +1,59 @@
+# ===== Data & NLP =====
+datasets
+pandas
+spacy
+tqdm
+
+# ===== Web Crawling =====
+requests
+beautifulsoup4
+selenium
+webdriver_manager 
+
+# ===== LlamaIndex (GraphRAG) =====
+llama-index
+llama-index-graph-stores-neo4j
+
+# ===== LangChain =====
+langchain>=0.3.27
+langchain-core>=0.3.74
+langchain-community>=0.3.29
+langchain-huggingface>=0.3.1
+langchain-text-splitters>=0.3.0
+
+# =========================
+# Gemini
+# =========================
+langchain-google-genai>=2.1.10
+google-generativeai>=0.8.5
+
+# ===== Graph Database =====
+neo4j
+
+# ===== Vector Store =====
+chromadb
+qdrant-client
+
+# ===== Utilities =====
+python-dotenv
+tqdm
+pydantic
+
+# ===== LLM =====
+openai
+# google-generativeai  # Uncomment nếu dùng Gemini
+
+# =========================
+# Neo4j
+# =========================
+
+neo4j>=5.28.0
+langchain-neo4j>=0.4.0
+
+# =========================
+# Embedding & NLP
+# =========================
+
+torch>=2.3.0
+transformers>=4.53.0
+sentence-transformers>=5.0.0
