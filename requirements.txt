@@ -3,6 +3,8 @@ datasets
 pandas
 spacy
 tqdm
+pymupdf
+python-docx
 
 # ===== Web Crawling =====
 requests
