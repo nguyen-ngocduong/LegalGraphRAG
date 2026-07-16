@@ -682,3 +682,106 @@ Stacktrace:
 2026-07-16 17:26:56,174 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
 2026-07-16 17:26:58,214 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
 2026-07-16 17:27:03,348 - [INFO] - Đang tải xuống tài liệu: LUẬT AN NINH MẠNG SỐ 116/2025/QH15
+2026-07-16 22:12:54,279 - [INFO] - ==================== START LOGGING ====================
+2026-07-16 22:12:54,286 - [INFO] - ====== WebDriver manager ======
+2026-07-16 22:12:54,577 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
+2026-07-16 22:13:02,466 - [INFO] - Đang mở trang web: https://vbpl.vn/
+2026-07-16 22:13:02,758 - [INFO] - Trang web đã tải xong.
+2026-07-16 22:13:03,663 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
+2026-07-16 22:13:08,664 - [INFO] - Kết quả tìm kiếm đã tải xong.
+2026-07-16 22:13:11,831 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
+2026-07-16 22:13:12,578 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
+2026-07-16 22:13:13,674 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
+2026-07-16 22:13:14,677 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
+2026-07-16 22:13:15,133 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
+2026-07-16 22:13:20,277 - [INFO] - Số lượng tài liệu trên trang hiện tại: 10
+2026-07-16 22:13:20,825 - [INFO] - Tổng số tài liệu tìm thấy trên trang hiện tại: 10
+2026-07-16 22:13:20,883 - [INFO] - Đang tải xuống tài liệu: LUẬT AN NINH MẠNG SỐ 116/2025/QH15
+2026-07-16 22:13:22,338 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/luat-an-ninh-mang-so-116-2025-qh15--187039?tabs=hien-thi-pdf
+2026-07-16 22:13:28,319 - [ERROR] - Không thể click nút download cho tài liệu 'LUẬT AN NINH MẠNG SỐ 116/2025/QH15': Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+#0 0x5700279efa6a <unknown>
+#1 0x5700273feab5 <unknown>
+#2 0x57002740592b <unknown>
+#3 0x5700274081ab <unknown>
+#4 0x570027408253 <unknown>
+#5 0x570027455dae <unknown>
+#6 0x570027453ab9 <unknown>
+#7 0x570027452ba7 <unknown>
+#8 0x570027446bb2 <unknown>
+#9 0x5700274464f7 <unknown>
+#10 0x5700274997b6 <unknown>
+#11 0x570027444cbf <unknown>
+#12 0x570027445a81 <unknown>
+#13 0x5700279b5a64 <unknown>
+#14 0x5700279b8951 <unknown>
+#15 0x5700279a221e <unknown>
+#16 0x5700279b951e <unknown>
+#17 0x570027988be0 <unknown>
+#18 0x5700279dc9b8 <unknown>
+#19 0x5700279dcb88 <unknown>
+#20 0x5700279ee4de <unknown>
+#21 0x78145649caa4 <unknown>
+#22 0x781456529c6c <unknown>
+
+2026-07-16 22:13:30,102 - [INFO] - Đang tải xuống tài liệu: Luật An ninh mạng số 24/2018/QH14
+2026-07-16 22:13:33,618 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/luat-an-ninh-mang-so-24-2018-qh14--132957?tabs=hien-thi-pdf
+2026-07-16 22:13:45,177 - [INFO] - Đang tải xuống tài liệu: Nghị định số 179/2025/NĐ-CP Quy định về mức hỗ trợ đối với người làm công tác chuyên trách về chuyển đổi số, an toàn thông tin mạng, an ninh mạng
+2026-07-16 22:13:46,428 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-179-2025-nd-cp-quy-dinh-ve-muc-ho-tro-doi-voi-nguoi-lam-cong-tac-chuyen-trach-ve-chuyen-doi-so-an-toan-thong-tin-mang-an-ninh-mang--179123?tabs=hien-thi-pdf
+2026-07-16 22:13:53,511 - [INFO] - Đang tải xuống tài liệu: Nghị định số 53/2022/NĐ-CP Quy định chi tiết một số điều của Luật An ninh mạng
+2026-07-16 22:13:55,006 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-53-2022-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-cua-luat-an-ninh-mang--180306?tabs=hien-thi-pdf
+2026-07-16 22:13:56,405 - [ERROR] - Không thể click nút download cho tài liệu 'Nghị định số 53/2022/NĐ-CP Quy định chi tiết một số điều của Luật An ninh mạng': Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+#0 0x5700279efa6a <unknown>
+#1 0x5700273feab5 <unknown>
+#2 0x57002740592b <unknown>
+#3 0x5700274081ab <unknown>
+#4 0x570027408253 <unknown>
+#5 0x5700274533e0 <unknown>
+#6 0x570027446b27 <unknown>
+#7 0x5700274464f7 <unknown>
+#8 0x5700274997b6 <unknown>
+#9 0x570027444cbf <unknown>
+#10 0x570027445a81 <unknown>
+#11 0x5700279b5a64 <unknown>
+#12 0x5700279b8951 <unknown>
+#13 0x5700279a221e <unknown>
+#14 0x5700279b951e <unknown>
+#15 0x570027988be0 <unknown>
+#16 0x5700279dc9b8 <unknown>
+#17 0x5700279dcb88 <unknown>
+#18 0x5700279ee4de <unknown>
+#19 0x78145649caa4 <unknown>
+#20 0x781456529c6c <unknown>
+
+2026-07-16 22:13:56,641 - [INFO] - Đang tải xuống tài liệu: Thông tư 47/2026/TT-BCA Ban hành Quy chuẩn kỹ thuật quốc gia về an ninh mạng cho hệ thống thông tin lưu trữ tài liệu điện tử trong các cơ quan Đảng, Nhà nước
+2026-07-16 22:13:57,571 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/thong-tu-47-2026-tt-bca-ban-hanh-quy-chuan-ky-thuat-quoc-gia-ve-an-ninh-mang-cho-he-thong-thong-tin-luu-tru-tai-lieu-dien-tu-trong-cac-co-quan-dang-nha-nuoc--03658420-541f-11f1-86b5-0754077bcc19?tabs=hien-thi-pdf
+2026-07-16 22:14:04,048 - [INFO] - Đang tải xuống tài liệu: Thông tư 48/2026/TT-BCA Ban hành Quy chuẩn kỹ thuật quốc gia về thiết bị camera giám sát sử dụng giao thức Internet - Các yêu cầu an ninh mạng cơ bản
+2026-07-16 22:14:05,788 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/thong-tu-48-2026-tt-bca-ban-hanh-quy-chuan-ky-thuat-quoc-gia-ve-thiet-bi-camera-giam-sat-su-dung-giao-thuc-internet-cac-yeu-cau-an-ninh-mang-co-ban--9048b740-541f-11f1-b175-1fe27ccb5c48?tabs=hien-thi-pdf
+2026-07-16 22:14:12,841 - [INFO] - Đang tải xuống tài liệu: Quyết định Ban hành Quy định bảo đảm an ninh mạng trong hoạt động ứng dụng công nghệ thông tin của cơ quan nhà nước trên địa bàn tỉnh Thái Nguyên
+2026-07-16 22:14:14,576 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-ban-hanh-quy-dinh-bao-dam-an-ninh-mang-trong-hoat-dong-ung-dung-cong-nghe-thong-tin-cua-co-quan-nha-nuoc-tren-dia-ban-tinh-thai-nguyen--d213b820-64b2-11f1-9229-8545036e24d5?tabs=hien-thi-pdf
+2026-07-16 22:14:20,842 - [INFO] - Đang tải xuống tài liệu: Quyết định Ban hành Quy chế quản lý, khai thác, sử dụng và bảo vệ an ninh mạng đối với hệ thống thông tin của các cơ quan nhà nước trên địa bàn tỉnh Quảng Ninh
+2026-07-16 22:14:26,374 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-ban-hanh-quy-che-quan-ly-khai-thac-su-dung-va-bao-ve-an-ninh-mang-doi-voi-he-thong-thong-tin-cua-cac-co-quan-nha-nuoc-tren-dia-ban-tinh-quang-ninh--57a26380-5ef3-11f1-9536-4b681a0861c0?tabs=hien-thi-pdf
+2026-07-16 22:14:33,684 - [INFO] - Đang tải xuống tài liệu: Quyết định số 11/2026/QĐ-UBND Ban hành Quy chế bảo đảm an ninh mạng, an toàn thông tin trên địa bàn tỉnh Khánh Hòa
+2026-07-16 22:14:34,853 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-11-2026-qd-ubnd-ban-hanh-quy-che-bao-dam-an-ninh-mang-an-toan-thong-tin-tren-dia-ban-tinh-khanh-hoa--186743?tabs=hien-thi-pdf
+2026-07-16 22:14:41,876 - [INFO] - Đang tải xuống tài liệu: Quyết định số 02/2026/QĐ-UBND Ban hành Quy chế bảo đảm an toàn thông tin, an ninh mạng trong hoạt động ứng dụng công nghệ thông tin của các cơ quan nhà nước trên địa bàn tỉnh Gia Lai
+2026-07-16 22:14:43,077 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-02-2026-qd-ubnd-ban-hanh-quy-che-bao-dam-an-toan-thong-tin-an-ninh-mang-trong-hoat-dong-ung-dung-cong-nghe-thong-tin-cua-cac-co-quan-nha-nuoc-tren-dia-ban-tinh-gia-lai--186012?tabs=hien-thi-pdf
+2026-07-16 22:14:50,245 - [INFO] - Đã sang trang tiếp theo!
+2026-07-16 22:14:56,109 - [INFO] - Số lượng tài liệu trên trang hiện tại: 7
+2026-07-16 22:14:56,750 - [INFO] - Tổng số tài liệu tìm thấy trên trang hiện tại: 7
+2026-07-16 22:14:56,774 - [INFO] - Đang tải xuống tài liệu: Quyết định số 40/2025/QĐ-UBND Ban hành Quy chế bảo đảm an ninh mạng, an toàn thông tin trên địa bàn tỉnh Bắc Ninh
+2026-07-16 22:15:02,764 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-40-2025-qd-ubnd-ban-hanh-quy-che-bao-dam-an-ninh-mang-an-toan-thong-tin-tren-dia-ban-tinh-bac-ninh--182958?tabs=hien-thi-pdf
+2026-07-16 22:15:14,928 - [INFO] - Đang tải xuống tài liệu: Quyết định số 10/2025/QĐ-UBND Ban hành Quy chế bảo đảm an toàn thông tin, an ninh mạng trong hoạt động ứng dụng công nghệ thông tin của các cơ quan nhà nước trên địa bàn tỉnh Phú Yên
+2026-07-16 22:15:16,074 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-10-2025-qd-ubnd-ban-hanh-quy-che-bao-dam-an-toan-thong-tin-an-ninh-mang-trong-hoat-dong-ung-dung-cong-nghe-thong-tin-cua-cac-co-quan-nha-nuoc-tren-dia-ban-tinh-phu-yen--175078?tabs=hien-thi-pdf
+2026-07-16 22:15:22,372 - [INFO] - Đang tải xuống tài liệu: Quyết định số 48/2024/QĐ-UBND Ban hành Quy chế Phối hợp trong công tác bảo đảm an ninh an toàn hệ thống mạng thông tin và thông tin quan trọng cần ưu tiên bảo đảm của tỉnh Bắc Giang
+2026-07-16 22:15:23,350 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-48-2024-qd-ubnd-ban-hanh-quy-che-phoi-hop-trong-cong-tac-bao-dam-an-ninh-an-toan-he-thong-mang-thong-tin-va-thong-tin-quan-trong-can-uu-tien-bao-dam-an-ninh-mang-cua-tinh-bac-giang--173939?tabs=hien-thi-pdf
+2026-07-16 22:15:29,500 - [INFO] - Đang tải xuống tài liệu: Quyết định số 33/2023/QĐ-UBND Ban hành Quy chế Quản lý, khai thác và vận hành Trung tâm Giám sát An ninh mạng (SOC)tỉnh Bến Tre
+2026-07-16 22:15:31,835 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/quyet-dinh-so-33-2023-qd-ubnd-ban-hanh-quy-che-quan-ly-khai-thac-va-van-hanh-trung-tam-giam-sat-an-ninh-mang-soc-tinh-ben-tre--162135?tabs=hien-thi-pdf
+2026-07-16 22:15:37,849 - [INFO] - Đang tải xuống tài liệu: Nghị quyết số 41/2026/NQ-HĐND Quy định về chế độ hỗ trợ đối với người làm công tác về chuyển đổi số, an toàn thông tin mạng, an ninh mạng trên địa bàn tỉnh Tây Ninh
+2026-07-16 22:15:38,737 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-quyet-so-41-2026-nq-hdnd-quy-dinh-ve-che-do-ho-tro-doi-voi-nguoi-lam-cong-tac-ve-chuyen-doi-so-an-toan-thong-tin-mang-an-ninh-mang-tren-dia-ban-tinh-tay-ninh--33b18fd0-7697-11f1-b522-31a8799843c6?tabs=hien-thi-pdf
+2026-07-16 22:15:44,814 - [INFO] - Đang tải xuống tài liệu: Nghị quyết số 773/2025/NQ-HĐND Quy định một số chính sách ưu đãi và hỗ trợ đầu tư vào lĩnh vực chuyển đổi số, an ninh mạng, bán dẫn, linh kiện điện tử, xây dựng phòng thí nghiệm, trung tâm đổi mới sáng tạo trên địa bàn tỉnh Hưng Yên giai đoạn từ năm 2025 đến năm 2030
+2026-07-16 22:15:45,593 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-quyet-so-773-2025-nq-hdnd-quy-dinh-mot-so-chinh-sach-uu-dai-va-ho-tro-dau-tu-vao-linh-vuc-chuyen-doi-so-an-ninh-mang-ban-dan-linh-kien-dien-tu-xay-dung-phong-thi-nghiem-trung-tam-doi-moi-sang-tao-tren-dia-ban-tinh-hung-yen-giai-doan-tu-nam-2025-den-nam-2030--184198?tabs=hien-thi-pdf
+2026-07-16 22:15:53,008 - [INFO] - Đang tải xuống tài liệu: Chỉ thị số 24/2003/CT-UB Tăng cường công tác bảo vệ an toàn, an ninh mạng lưới bưu chính viễn thông trên địa bàn tỉnh Lâm Đồng
+2026-07-16 22:15:53,750 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/chi-thi-so-24-2003-ct-ub-tang-cuong-cong-tac-bao-ve-an-toan-an-ninh-mang-luoi-buu-chinh-vien-thong-tren-dia-ban-tinh-lam-dong--74834?tabs=hien-thi-pdf

@@ -174,112 +174,118 @@ class Crawl:
 
     def get_document(self) -> list:
         """
-        Lấy tất cả tài liệu qua các trang.
-        Trả về list dict {title, element} — element được lấy lại mới trước khi dùng.
+        Lấy danh sách tài liệu trên trang hiện tại.
+        Trả về list dict {title, element}.
         """
-        all_docs = []
-        # Thu thập trang đầu
         page_docs = self._get_document_links_on_page()
-        all_docs.extend(page_docs)
-
-        while self._has_next_page():
-            try:
-                active_page_before = self._get_active_page()
-                self.next_page()
-                self.wait.until(lambda driver: self._get_active_page() != active_page_before)
-                wait()
-                page_docs = self._get_document_links_on_page()
-                if not page_docs:
-                    logging.info("Không còn tài liệu nào để tải xuống.")
-                    break
-                all_docs.extend(page_docs)
-            except Exception as e:
-                logging.error(f"Lỗi khi chuyển trang: {e}")
-                break
-
-        logging.info(f"Tổng số tài liệu tìm thấy: {len(all_docs)}")
-        return all_docs
-    def download_document(self, document_info: dict):
+        logging.info(f"Tổng số tài liệu tìm thấy trên trang hiện tại: {len(page_docs)}")
+        return page_docs
+    def download_document(self, doc_info):
         """
-        document_info: dict với key 'title' và 'element' (WebElement của <li>)
+        doc_info: dict chứa title và element của một <li> document
         """
-        title = document_info["title"]
-        document = document_info["element"]
-        logging.info(f"Đang tải xuống tài liệu: {title}")
 
-        # FIX 1: Lấy lại element mới nhất từ DOM để tránh StaleElementReferenceException
+        document = doc_info.get("element") if isinstance(doc_info, dict) else doc_info
+        if document is None:
+            logging.error("Không có element tài liệu hợp lệ để tải xuống.")
+            return
+
+        title = doc_info.get("title") if isinstance(doc_info, dict) else None
+        original_window = self.driver.current_window_handle
+
+        # ======================================================
+        # 1. Lấy title_element
+        # ======================================================
         try:
-            document = self.wait.until(
-                EC.presence_of_element_located((
-                    By.XPATH,
-                    f"//li[contains(@class,'ant-list-item')][.//*[normalize-space()='{title}']]"
-                ))
-            )
-        except Exception:
-            logging.warning(f"Không tìm lại được element cho '{title}', dùng element cũ.")
-
-        # FIX 2: Click nút PDF đúng cách — dùng JS click thay vì _safe_click(element)
+            title_element = document.find_element(By.XPATH, ".//div[contains(@class,'DocumentCard_documentTitle')]")
+        except Exception as e:
+            logging.error(f"Không thể lấy title_element: {e}")
+            return 
+        # ======================================================
+        # 2. Lấy title
+        # ======================================================
+        title = title or title_element.text.strip()
+        logging.info(f"Đang tải xuống tài liệu: {title}")
+        # ======================================================
+        # 3. Click nút PDF
+        # ======================================================
         try:
             pdf_button = document.find_element(
                 By.XPATH,
                 ".//button[.//span[normalize-space()='PDF']]"
             )
-            self.driver.execute_script("arguments[0].click();", pdf_button)
+            self.driver.execute_script(
+                "arguments[0].scrollIntoView({block: 'center', inline: 'center'});",
+                pdf_button,
+            )
+            try:
+                pdf_button.click()
+            except Exception:
+                self.driver.execute_script("arguments[0].click();", pdf_button)
         except Exception as e:
-            logging.error(f"Không tìm thấy nút PDF cho '{title}': {e}")
-            return None
-
-        # Chờ tab mới mở
-        main_window = self.driver.current_window_handle
-        try:
-            self.wait.until(lambda d: len(d.window_handles) > 1)
+            logging.error(f"Không thể click nút PDF cho tài liệu '{title}': {e}")
+            return
+        # ======================================================
+        # 4. Lấy link
+        # ======================================================
+        link = None
+        try: 
+            self.wait.until(
+                lambda d: len(d.window_handles) > 1
+            )
+            self.driver.switch_to.window(
+                self.driver.window_handles[-1]
+            )
+            link = self.driver.current_url
+            logging.info(f"Link tài liệu: {link}")
         except Exception as e:
-            logging.error(f"Tab mới không mở được cho '{title}': {e}")
-            return None
-
-        self.driver.switch_to.window(self.driver.window_handles[-1])
-        link = self.driver.current_url
-        logging.info(f"URL của tài liệu PDF: {link}")
-
-        # FIX 3: Click tab "Tải về" với wait đầy đủ
+            logging.error(f"Không thể lấy link tài liệu '{title}': {e}")
+            return
+        # ======================================================
+        # 5. Click tab "Tải về"
+        # ======================================================
         try:
-            download_tab = self.wait.until(
-                EC.element_to_be_clickable((
+            try: 
+                self._safe_click(
                     By.CSS_SELECTOR,
                     "div[data-node-key='tai-ve']"
-                ))
-            )
-            self.driver.execute_script("arguments[0].click();", download_tab)
-        except Exception as e:
-            logging.error(f"Không tìm thấy tab 'Tải về' cho '{title}': {e}")
-            self.driver.close()
-            self.driver.switch_to.window(main_window)
-            return None
+                )
+            except Exception as e:
+                logging.error(f"Không thể click tab 'Tải về' cho tài liệu '{title}': {e}")
+                return
+            # ======================================================
+            # 6. Click icon download DOC
+            # ======================================================
+            try: 
+                download_btn = self.wait.until(
+                    EC.element_to_be_clickable(
+                        (
+                            By.CSS_SELECTOR,
+                            "button.ant-btn-icon-only"
+                        )
+                    )
+                )
+                download_btn.click()
+            except Exception as e:
+                logging.error(f"Không thể click nút download cho tài liệu '{title}': {e}")
+                return
+            # ======================================================
+            # 7. Chờ tải xong
+            # ======================================================
+            wait()
 
-        # Click nút "Tải về"
-        try:
-            download_btn = self.wait.until(
-                EC.element_to_be_clickable((
-                    By.CSS_SELECTOR,
-                    "button.ant-btn-icon-only"
-                ))
-            )
-            self.driver.execute_script("arguments[0].click();", download_btn)
-        except Exception as e:
-            logging.error(f"Không tìm thấy nút tải về cho '{title}': {e}")
-            self.driver.close()
-            self.driver.switch_to.window(main_window)
-            return None
-
-        # Chờ tải xong rồi đóng tab PDF và quay lại tab chính
-        time.sleep(5)
-        self.driver.close()
-        self.driver.switch_to.window(main_window)
-
-        return {
-            "title": title,
-            "link": link
-        }
+            return {
+                "title_element": title_element,
+                "title": title,
+                "link": link
+            }
+        finally:
+            try:
+                if self.driver.current_window_handle != original_window:
+                    self.driver.close()
+                    self.driver.switch_to.window(original_window)
+            except Exception as e:
+                logging.warning(f"Không thể quay lại trang kết quả cho tài liệu '{title}': {e}")
     def run(self):
         """
         Chạy quá trình crawl dữ liệu
@@ -287,14 +293,18 @@ class Crawl:
         self.open_page("https://vbpl.vn/")
         self.search_keyword()
         self.search_extra()
-        # get_document() bây giờ trả về list dict {title, element}
-        document_infos = self.get_document()
-        for doc_info in document_infos:
-            try:
+        while True:
+            document_infos = self.get_document()
+            for doc_info in document_infos:
                 self.download_document(doc_info)
-            except Exception as e:
-                logging.error(f"Không thể tải xuống tài liệu '{doc_info.get('title', '?')}': {e}")
-                continue
+
+            if not self._has_next_page():
+                break
+
+            active_page_before = self._get_active_page()
+            self.next_page()
+            self.wait.until(lambda driver: self._get_active_page() != active_page_before)
+            wait()
             
 if __name__ == "__main__":
     log()
