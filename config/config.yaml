@@ -1,0 +1,5 @@
+PATH:
+  RAW_PATH: data/raw
+  PROCESSED_PATH: data/processed
+KEY:
+  GEMINI_API_KEY: ${GEMINI_API_KEY}
