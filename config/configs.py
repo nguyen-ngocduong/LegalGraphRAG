@@ -17,6 +17,7 @@ config = load_config()
 
 RAW_PATH = config['PATH']['RAW_PATH']
 PROCESSED_PATH = config['PATH']['PROCESSED_PATH']
+CLEAN_PATH = config['PATH']['CLEANED_PATH']
 
 # === GEMINI API KEY ===
 
