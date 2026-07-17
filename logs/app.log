@@ -14,37 +14,7 @@
 2026-07-16 14:46:52,787 - [INFO] - Trang web đã tải xong.
 2026-07-16 14:46:54,020 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
 2026-07-16 14:46:59,022 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 15:13:23,916 - [INFO] - ==================== START LOGGING ====================
-2026-07-16 15:13:23,918 - [INFO] - ====== WebDriver manager ======
-2026-07-16 15:13:24,011 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-07-16 15:13:28,201 - [INFO] - Đang mở trang web: https://vbpl.vn/
-2026-07-16 15:13:29,543 - [INFO] - Trang web đã tải xong.
-2026-07-16 15:13:30,859 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
-2026-07-16 15:13:35,860 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 15:13:37,114 - [ERROR] - Không thể tìm kiếm nâng cao: Message: element click intercepted: Element <span class="ant-checkbox-label">...</span> is not clickable at point (611, 308). Other element would receive the click: <img alt="banner" fetchpriority="high" width="5461" height="5461" decoding="async" data-nimg="1" class="w-full h-full object-fill grayscale opacity-10" srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTr%E1%BB%91ng_%C4%91%E1%BB%93ng_%C4%90%C3%B4ng_S%C6%A1n.c5fc784a.png&amp;w=3840&amp;q=75 1x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTr%E1%BB%91ng_%C4%91%E1%BB%93ng_%C4%90%C3%B4ng_S%C6%A1n.c5fc784a.png&amp;w=3840&amp;q=75" style="color: transparent;">
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
-Stacktrace:
-#0 0x63ff3c99fa6a <unknown>
-#1 0x63ff3c3aeab5 <unknown>
-#2 0x63ff3c40893b <unknown>
-#3 0x63ff3c406572 <unknown>
-#4 0x63ff3c403ab9 <unknown>
-#5 0x63ff3c402ba7 <unknown>
-#6 0x63ff3c3f6bb2 <unknown>
-#7 0x63ff3c3f64f7 <unknown>
-#8 0x63ff3c4497b6 <unknown>
-#9 0x63ff3c3f4cbf <unknown>
-#10 0x63ff3c3f5a81 <unknown>
-#11 0x63ff3c965a64 <unknown>
-#12 0x63ff3c968951 <unknown>
-#13 0x63ff3c95221e <unknown>
-#14 0x63ff3c96951e <unknown>
-#15 0x63ff3c938be0 <unknown>
-#16 0x63ff3c98c9b8 <unknown>
-#17 0x63ff3c98cb88 <unknown>
-#18 0x63ff3c99e4de <unknown>
-#19 0x72b2f389caa4 <unknown>
-#20 0x72b2f3929c6c <unknown>
+
 2026-07-16 15:18:18,299 - [INFO] - ==================== START LOGGING ====================
 2026-07-16 15:18:18,300 - [INFO] - ====== WebDriver manager ======
 2026-07-16 15:18:18,369 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
@@ -57,295 +27,6 @@ Stacktrace:
 2026-07-16 15:18:32,253 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
 2026-07-16 15:18:33,109 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
 2026-07-16 15:18:33,584 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
-2026-07-16 16:46:00,208 - [INFO] - ==================== START LOGGING ====================
-2026-07-16 16:46:00,210 - [INFO] - ====== WebDriver manager ======
-2026-07-16 16:46:00,307 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-07-16 16:46:04,302 - [INFO] - Đang mở trang web: https://vbpl.vn/
-2026-07-16 16:46:04,869 - [INFO] - Trang web đã tải xong.
-2026-07-16 16:46:05,651 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
-2026-07-16 16:46:10,652 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 16:46:12,378 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
-2026-07-16 16:46:12,997 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
-2026-07-16 16:46:13,815 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
-2026-07-16 16:46:14,615 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
-2026-07-16 16:46:14,962 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
-Số lượng tài liệu tìm thấy: 10
-2026-07-16 16:46:20,547 - [INFO] - Đã sang trang tiếp theo!
-2026-07-16 16:46:25,630 - [INFO] - Tổng số tài liệu tìm thấy: 17
-2026-07-16 16:46:25,669 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,710 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,737 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,762 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,786 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,809 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,834 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,856 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,874 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,899 - [ERROR] - Không thể tải xuống tài liệu: Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x569c983caa6a <unknown>
-#1 0x569c97dd9ab5 <unknown>
-#2 0x569c97de092b <unknown>
-#3 0x569c97de31ab <unknown>
-#4 0x569c97de3253 <unknown>
-#5 0x569c97e2c059 <unknown>
-#6 0x569c97e2c8b1 <unknown>
-#7 0x569c97e21616 <unknown>
-#8 0x569c97e214f7 <unknown>
-#9 0x569c97e747b6 <unknown>
-#10 0x569c97e1fcbf <unknown>
-#11 0x569c97e20a81 <unknown>
-#12 0x569c98390a64 <unknown>
-#13 0x569c98393951 <unknown>
-#14 0x569c9837d21e <unknown>
-#15 0x569c9839451e <unknown>
-#16 0x569c98363be0 <unknown>
-#17 0x569c983b79b8 <unknown>
-#18 0x569c983b7b88 <unknown>
-#19 0x569c983c94de <unknown>
-#20 0x7d591649caa4 <unknown>
-#21 0x7d5916529c6c <unknown>
-
-2026-07-16 16:46:25,934 - [INFO] - Đang tải xuống tài liệu: Quyết định số 40/2025/QĐ-UBND Ban hành Quy chế bảo đảm an ninh mạng, an toàn thông tin trên địa bàn tỉnh Bắc Ninh
-2026-07-16 16:46:25,961 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:25,988 - [INFO] - Đang tải xuống tài liệu: Quyết định số 10/2025/QĐ-UBND Ban hành Quy chế bảo đảm an toàn thông tin, an ninh mạng trong hoạt động ứng dụng công nghệ thông tin của các cơ quan nhà nước trên địa bàn tỉnh Phú Yên
-2026-07-16 16:46:26,002 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:26,033 - [INFO] - Đang tải xuống tài liệu: Quyết định số 48/2024/QĐ-UBND Ban hành Quy chế Phối hợp trong công tác bảo đảm an ninh an toàn hệ thống mạng thông tin và thông tin quan trọng cần ưu tiên bảo đảm của tỉnh Bắc Giang
-2026-07-16 16:46:26,045 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:26,073 - [INFO] - Đang tải xuống tài liệu: Quyết định số 33/2023/QĐ-UBND Ban hành Quy chế Quản lý, khai thác và vận hành Trung tâm Giám sát An ninh mạng (SOC)tỉnh Bến Tre
-2026-07-16 16:46:26,088 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:26,118 - [INFO] - Đang tải xuống tài liệu: Nghị quyết số 41/2026/NQ-HĐND Quy định về chế độ hỗ trợ đối với người làm công tác về chuyển đổi số, an toàn thông tin mạng, an ninh mạng trên địa bàn tỉnh Tây Ninh
-2026-07-16 16:46:26,136 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:26,170 - [INFO] - Đang tải xuống tài liệu: Nghị quyết số 773/2025/NQ-HĐND Quy định một số chính sách ưu đãi và hỗ trợ đầu tư vào lĩnh vực chuyển đổi số, an ninh mạng, bán dẫn, linh kiện điện tử, xây dựng phòng thí nghiệm, trung tâm đổi mới sáng tạo trên địa bàn tỉnh Hưng Yên giai đoạn từ năm 2025 đến năm 2030
-2026-07-16 16:46:26,186 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'
-2026-07-16 16:46:26,213 - [INFO] - Đang tải xuống tài liệu: Chỉ thị số 24/2003/CT-UB Tăng cường công tác bảo vệ an toàn, an ninh mạng lưới bưu chính viễn thông trên địa bàn tỉnh Lâm Đồng
-2026-07-16 16:46:26,226 - [ERROR] - Không thể tải xuống tài liệu: Crawl._safe_click() missing 1 required positional argument: 'value'2026-07-16 16:51:34,822 - [INFO] - ==================== START LOGGING ====================
 2026-07-16 16:51:34,824 - [INFO] - ====== WebDriver manager ======
 2026-07-16 16:51:34,922 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
 2026-07-16 16:51:38,689 - [INFO] - Đang mở trang web: https://vbpl.vn/
@@ -392,370 +73,6 @@ Stacktrace:
 2026-07-16 16:53:56,090 - [INFO] - URL của tài liệu PDF: https://vbpl.vn/van-ban/chi-tiet/nghi-quyet-so-773-2025-nq-hdnd-quy-dinh-mot-so-chinh-sach-uu-dai-va-ho-tro-dau-tu-vao-linh-vuc-chuyen-doi-so-an-ninh-mang-ban-dan-linh-kien-dien-tu-xay-dung-phong-thi-nghiem-trung-tam-doi-moi-sang-tao-tren-dia-ban-tinh-hung-yen-giai-doan-tu-nam-2025-den-nam-2030--184198?tabs=hien-thi-pdf
 2026-07-16 16:54:02,928 - [INFO] - Đang tải xuống tài liệu: Chỉ thị số 24/2003/CT-UB Tăng cường công tác bảo vệ an toàn, an ninh mạng lưới bưu chính viễn thông trên địa bàn tỉnh Lâm Đồng
 2026-07-16 16:54:03,875 - [INFO] - URL của tài liệu PDF: https://vbpl.vn/van-ban/chi-tiet/chi-thi-so-24-2003-ct-ub-tang-cuong-cong-tac-bao-ve-an-toan-an-ninh-mang-luoi-buu-chinh-vien-thong-tren-dia-ban-tinh-lam-dong--74834?tabs=hien-thi-pdf
-2026-07-16 17:20:40,882 - [INFO] - ==================== START LOGGING ====================
-2026-07-16 17:20:40,884 - [INFO] - ====== WebDriver manager ======
-2026-07-16 17:20:40,966 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-07-16 17:20:44,249 - [INFO] - Đang mở trang web: https://vbpl.vn/
-2026-07-16 17:20:44,877 - [INFO] - Trang web đã tải xong.
-2026-07-16 17:20:45,622 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
-2026-07-16 17:20:50,622 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 17:20:51,917 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
-2026-07-16 17:20:52,401 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
-2026-07-16 17:20:53,108 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
-2026-07-16 17:20:53,931 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
-2026-07-16 17:20:56,215 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
-2026-07-16 17:21:01,305 - [INFO] - Đang tải xuống tài liệu: LUẬT AN NINH MẠNG SỐ 116/2025/QH15
-2026-07-16 17:21:01,970 - [INFO] - URL của tài liệu PDF: https://vbpl.vn/van-ban/chi-tiet/luat-an-ninh-mang-so-116-2025-qh15--187039?tabs=hien-thi-pdf
-2026-07-16 17:21:18,681 - [ERROR] - Không thể tải xuống tài liệu: Message: 
-
-2026-07-16 17:21:18,697 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,712 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,726 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,740 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,754 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,768 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,786 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,800 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:21:18,811 - [ERROR] - Không thể tải xuống tài liệu: Message: no such element: element not found
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
-Stacktrace:
-#0 0x63d644329a6a <unknown>
-#1 0x63d643d38ab5 <unknown>
-#2 0x63d643d4c7e4 <unknown>
-#3 0x63d643d4b581 <unknown>
-#4 0x63d643d40329 <unknown>
-#5 0x63d643d3e4f9 <unknown>
-#6 0x63d643d421ab <unknown>
-#7 0x63d643d42253 <unknown>
-#8 0x63d643d8b059 <unknown>
-#9 0x63d643d8b8b1 <unknown>
-#10 0x63d643d80616 <unknown>
-#11 0x63d643d804f7 <unknown>
-#12 0x63d643dd37b6 <unknown>
-#13 0x63d643d7ecbf <unknown>
-#14 0x63d643d7fa81 <unknown>
-#15 0x63d6442efa64 <unknown>
-#16 0x63d6442f2951 <unknown>
-#17 0x63d6442dc21e <unknown>
-#18 0x63d6442f351e <unknown>
-#19 0x63d6442c2be0 <unknown>
-#20 0x63d6443169b8 <unknown>
-#21 0x63d644316b88 <unknown>
-#22 0x63d6443284de <unknown>
-#23 0x7615bfe9caa4 <unknown>
-#24 0x7615bff29c6c <unknown>
-
-2026-07-16 17:26:41,707 - [INFO] - ==================== START LOGGING ====================
-2026-07-16 17:26:41,710 - [INFO] - ====== WebDriver manager ======
-2026-07-16 17:26:41,785 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-07-16 17:26:46,214 - [INFO] - Đang mở trang web: https://vbpl.vn/
-2026-07-16 17:26:47,130 - [INFO] - Trang web đã tải xong.
-2026-07-16 17:26:47,802 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
-2026-07-16 17:26:52,802 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 17:26:54,146 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
-2026-07-16 17:26:54,635 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
-2026-07-16 17:26:55,379 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
-2026-07-16 17:26:56,174 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
-2026-07-16 17:26:58,214 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
-2026-07-16 17:27:03,348 - [INFO] - Đang tải xuống tài liệu: LUẬT AN NINH MẠNG SỐ 116/2025/QH15
-2026-07-16 22:12:54,279 - [INFO] - ==================== START LOGGING ====================
-2026-07-16 22:12:54,286 - [INFO] - ====== WebDriver manager ======
-2026-07-16 22:12:54,577 - [INFO] - Driver [/home/admin123/.wdm/drivers/chromedriver/linux64/146.0.7680.165/chromedriver-linux64/chromedriver] found in cache by browser version
-2026-07-16 22:13:02,466 - [INFO] - Đang mở trang web: https://vbpl.vn/
-2026-07-16 22:13:02,758 - [INFO] - Trang web đã tải xong.
-2026-07-16 22:13:03,663 - [INFO] - Đang tìm kiếm từ khóa: an ninh mạng
-2026-07-16 22:13:08,664 - [INFO] - Kết quả tìm kiếm đã tải xong.
-2026-07-16 22:13:11,831 - [INFO] - Đã chọn tiêu chí 'Chính xác cụm từ trên'.
-2026-07-16 22:13:12,578 - [INFO] - Đã click vào nút 'Tìm kiếm nâng cao'.
-2026-07-16 22:13:13,674 - [INFO] - Đã click vào dropdown 'Tình trạng hiệu lực'.
-2026-07-16 22:13:14,677 - [INFO] - Đã chọn 'Còn hiệu lực' trong dropdown 'Tình trạng hiệu lực'.
-2026-07-16 22:13:15,133 - [INFO] - Đã click vào nút 'Tìm kiếm' trong tìm kiếm nâng cao.
-2026-07-16 22:13:20,277 - [INFO] - Số lượng tài liệu trên trang hiện tại: 10
-2026-07-16 22:13:20,825 - [INFO] - Tổng số tài liệu tìm thấy trên trang hiện tại: 10
-2026-07-16 22:13:20,883 - [INFO] - Đang tải xuống tài liệu: LUẬT AN NINH MẠNG SỐ 116/2025/QH15
-2026-07-16 22:13:22,338 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/luat-an-ninh-mang-so-116-2025-qh15--187039?tabs=hien-thi-pdf
-2026-07-16 22:13:28,319 - [ERROR] - Không thể click nút download cho tài liệu 'LUẬT AN NINH MẠNG SỐ 116/2025/QH15': Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x5700279efa6a <unknown>
-#1 0x5700273feab5 <unknown>
-#2 0x57002740592b <unknown>
-#3 0x5700274081ab <unknown>
-#4 0x570027408253 <unknown>
-#5 0x570027455dae <unknown>
-#6 0x570027453ab9 <unknown>
-#7 0x570027452ba7 <unknown>
-#8 0x570027446bb2 <unknown>
-#9 0x5700274464f7 <unknown>
-#10 0x5700274997b6 <unknown>
-#11 0x570027444cbf <unknown>
-#12 0x570027445a81 <unknown>
-#13 0x5700279b5a64 <unknown>
-#14 0x5700279b8951 <unknown>
-#15 0x5700279a221e <unknown>
-#16 0x5700279b951e <unknown>
-#17 0x570027988be0 <unknown>
-#18 0x5700279dc9b8 <unknown>
-#19 0x5700279dcb88 <unknown>
-#20 0x5700279ee4de <unknown>
-#21 0x78145649caa4 <unknown>
-#22 0x781456529c6c <unknown>
-
-2026-07-16 22:13:30,102 - [INFO] - Đang tải xuống tài liệu: Luật An ninh mạng số 24/2018/QH14
-2026-07-16 22:13:33,618 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/luat-an-ninh-mang-so-24-2018-qh14--132957?tabs=hien-thi-pdf
-2026-07-16 22:13:45,177 - [INFO] - Đang tải xuống tài liệu: Nghị định số 179/2025/NĐ-CP Quy định về mức hỗ trợ đối với người làm công tác chuyên trách về chuyển đổi số, an toàn thông tin mạng, an ninh mạng
-2026-07-16 22:13:46,428 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-179-2025-nd-cp-quy-dinh-ve-muc-ho-tro-doi-voi-nguoi-lam-cong-tac-chuyen-trach-ve-chuyen-doi-so-an-toan-thong-tin-mang-an-ninh-mang--179123?tabs=hien-thi-pdf
-2026-07-16 22:13:53,511 - [INFO] - Đang tải xuống tài liệu: Nghị định số 53/2022/NĐ-CP Quy định chi tiết một số điều của Luật An ninh mạng
-2026-07-16 22:13:55,006 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-53-2022-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-cua-luat-an-ninh-mang--180306?tabs=hien-thi-pdf
-2026-07-16 22:13:56,405 - [ERROR] - Không thể click nút download cho tài liệu 'Nghị định số 53/2022/NĐ-CP Quy định chi tiết một số điều của Luật An ninh mạng': Message: stale element reference: stale element not found in the current frame
-  (Session info: chrome=146.0.7680.153); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Stacktrace:
-#0 0x5700279efa6a <unknown>
-#1 0x5700273feab5 <unknown>
-#2 0x57002740592b <unknown>
-#3 0x5700274081ab <unknown>
-#4 0x570027408253 <unknown>
-#5 0x5700274533e0 <unknown>
-#6 0x570027446b27 <unknown>
-#7 0x5700274464f7 <unknown>
-#8 0x5700274997b6 <unknown>
-#9 0x570027444cbf <unknown>
-#10 0x570027445a81 <unknown>
-#11 0x5700279b5a64 <unknown>
-#12 0x5700279b8951 <unknown>
-#13 0x5700279a221e <unknown>
-#14 0x5700279b951e <unknown>
-#15 0x570027988be0 <unknown>
-#16 0x5700279dc9b8 <unknown>
-#17 0x5700279dcb88 <unknown>
-#18 0x5700279ee4de <unknown>
-#19 0x78145649caa4 <unknown>
-#20 0x781456529c6c <unknown>
-
 2026-07-16 22:13:56,641 - [INFO] - Đang tải xuống tài liệu: Thông tư 47/2026/TT-BCA Ban hành Quy chuẩn kỹ thuật quốc gia về an ninh mạng cho hệ thống thông tin lưu trữ tài liệu điện tử trong các cơ quan Đảng, Nhà nước
 2026-07-16 22:13:57,571 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/thong-tu-47-2026-tt-bca-ban-hanh-quy-chuan-ky-thuat-quoc-gia-ve-an-ninh-mang-cho-he-thong-thong-tin-luu-tru-tai-lieu-dien-tu-trong-cac-co-quan-dang-nha-nuoc--03658420-541f-11f1-86b5-0754077bcc19?tabs=hien-thi-pdf
 2026-07-16 22:14:04,048 - [INFO] - Đang tải xuống tài liệu: Thông tư 48/2026/TT-BCA Ban hành Quy chuẩn kỹ thuật quốc gia về thiết bị camera giám sát sử dụng giao thức Internet - Các yêu cầu an ninh mạng cơ bản
@@ -845,3 +162,220 @@ Stacktrace:
 2026-07-17 10:55:10,965 - [INFO] - Đã lưu xong file data/processed/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.txt vào data/cleaned!
 2026-07-17 10:55:10,965 - [INFO] - processing qd-33-2023.txt ...
 2026-07-17 10:55:10,971 - [INFO] - Đã lưu xong file data/processed/qd-33-2023.txt vào data/cleaned!
+2026-07-17 15:02:32,251 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 15:02:32,304 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 15:02:32,308 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 15:02:32,310 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 15:02:32,337 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 15:02:32,340 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 15:02:32,382 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 32 chunk.
+2026-07-17 15:02:32,383 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 15:02:32,385 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 15:02:32,390 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 15:02:32,411 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 31 chunk.
+2026-07-17 15:02:32,425 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 15:02:32,426 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 15:02:32,428 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 15:02:32,429 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 15:02:32,439 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 15:09:55,385 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 15:09:55,433 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 15:09:55,436 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 15:09:55,438 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 15:09:55,462 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 15:09:55,464 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 15:09:55,499 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 32 chunk.
+2026-07-17 15:09:55,501 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 15:09:55,502 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 15:09:55,507 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 15:09:55,522 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 31 chunk.
+2026-07-17 15:09:55,534 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 15:09:55,535 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 15:09:55,536 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 15:09:55,537 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 15:09:55,547 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 15:32:05,909 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 15:32:05,957 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 15:32:05,961 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 15:32:05,964 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 15:32:05,992 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 15:32:05,993 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 15:32:06,031 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 32 chunk.
+2026-07-17 15:32:06,034 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 15:32:06,036 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 15:32:06,042 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 15:32:06,057 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 31 chunk.
+2026-07-17 15:32:06,069 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 15:32:06,071 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 15:32:06,072 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 15:32:06,073 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 15:32:06,083 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 15:59:16,376 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 15:59:16,575 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 15:59:16,583 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 15:59:16,591 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 15:59:16,711 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 15:59:16,714 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 15:59:16,816 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 32 chunk.
+2026-07-17 15:59:16,819 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 15:59:16,821 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 15:59:16,832 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 15:59:16,914 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 31 chunk.
+2026-07-17 15:59:16,983 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 15:59:16,986 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 15:59:16,989 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 15:59:16,991 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 15:59:17,015 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 16:16:23,724 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 16:16:23,804 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 16:16:23,809 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 16:16:23,813 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 16:16:23,845 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 16:16:23,848 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 16:16:23,888 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 32 chunk.
+2026-07-17 16:16:23,890 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 16:16:23,892 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 16:16:23,897 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 16:16:23,919 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 31 chunk.
+2026-07-17 16:16:23,938 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 16:16:23,940 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 16:16:23,943 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 16:16:23,945 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 16:16:23,957 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 17:27:16,783 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 17:27:16,784 - [INFO] - Đã lấy tất cả các file từ data/raw - có 14 file tất cả!!
+2026-07-17 17:27:18,079 - [ERROR] - Khong tim thay file sau khi chuyen doi: /tmp/tmpxpsaerus/179_2025_ND-CP_663165.docx
+2026-07-17 17:28:55,190 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 17:28:55,191 - [INFO] - Đã lấy tất cả các file từ data/raw - có 14 file tất cả!!
+2026-07-17 17:28:55,993 - [ERROR] - Khong tim thay file sau khi chuyen doi: /tmp/tmp4etpzd8l/179_2025_ND-CP_663165.docx
+2026-07-17 17:30:32,941 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 17:30:32,941 - [INFO] - Đã lấy tất cả các file từ data/raw - có 14 file tất cả!!
+2026-07-17 17:30:34,788 - [INFO] - Đã đọc xong file /tmp/tmpahk9dsa6/179_2025_ND-CP_663165.docx
+2026-07-17 17:30:34,858 - [INFO] - Đã đọc xong file data/raw/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).docx
+2026-07-17 17:31:11,205 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 17:31:11,206 - [INFO] - Đã lấy tất cả các file từ data/raw - có 14 file tất cả!!
+2026-07-17 17:31:11,434 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.pdf
+2026-07-17 17:31:11,437 - [INFO] - Đã lưu file: data/processed/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.txt
+2026-07-17 17:31:12,912 - [INFO] - Đã đọc xong file /tmp/tmp1wgsua0d/60.2026.QĐ-UBND.docx
+2026-07-17 17:31:12,913 - [INFO] - Đã lưu file: data/processed/60.2026.QĐ-UBND.txt
+2026-07-17 17:31:12,984 - [INFO] - Đã đọc xong file data/raw/qd-33-2023.docx
+2026-07-17 17:31:12,984 - [INFO] - Đã lưu file: data/processed/qd-33-2023.txt
+2026-07-17 17:31:13,011 - [INFO] - Đã đọc xong file data/raw/48.2026.TT.BCA.docx
+2026-07-17 17:31:13,011 - [INFO] - Đã lưu file: data/processed/48.2026.TT.BCA.txt
+2026-07-17 17:31:13,049 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_773.2025.NQ.HĐND.1.pdf
+2026-07-17 17:31:13,050 - [INFO] - Đã lưu file: data/processed/VanBanGoc_773.2025.NQ.HĐND.1.txt
+2026-07-17 17:31:14,839 - [INFO] - Đã đọc xong file /tmp/tmpf8paga_u/24.2018.QH14. Luat An ninh mang.docx
+2026-07-17 17:31:14,840 - [INFO] - Đã lưu file: data/processed/24.2018.QH14. Luat An ninh mang.txt
+2026-07-17 17:31:14,900 - [INFO] - Đã đọc xong file data/raw/QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).docx
+2026-07-17 17:31:14,901 - [INFO] - Đã lưu file: data/processed/QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).txt
+2026-07-17 17:31:14,972 - [INFO] - Đã đọc xong file data/raw/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).docx
+2026-07-17 17:31:14,972 - [INFO] - Đã lưu file: data/processed/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).txt
+2026-07-17 17:31:16,336 - [INFO] - Đã đọc xong file /tmp/tmpbiwacd07/179_2025_ND-CP_663165.docx
+2026-07-17 17:31:16,340 - [INFO] - Đã lưu file: data/processed/179_2025_ND-CP_663165.txt
+2026-07-17 17:31:18,352 - [INFO] - Đã đọc xong file /tmp/tmp0wjo4knv/53.2022.ND.CP.docx
+2026-07-17 17:31:18,356 - [INFO] - Đã lưu file: data/processed/53.2022.ND.CP.txt
+2026-07-17 17:31:18,550 - [INFO] - Đã đọc xong file data/raw/116.2025.QH15.docx
+2026-07-17 17:31:18,556 - [INFO] - Đã lưu file: data/processed/116.2025.QH15.txt
+2026-07-17 17:31:20,231 - [INFO] - Đã đọc xong file /tmp/tmpw5y07cyo/Chi thi so 24 - 2003 - CT-UB.docx
+2026-07-17 17:31:20,232 - [INFO] - Đã lưu file: data/processed/Chi thi so 24 - 2003 - CT-UB.txt
+2026-07-17 17:31:20,521 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.pdf
+2026-07-17 17:31:20,524 - [INFO] - Đã lưu file: data/processed/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.txt
+2026-07-17 17:31:20,785 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.pdf
+2026-07-17 17:31:20,787 - [INFO] - Đã lưu file: data/processed/VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.txt
+2026-07-17 17:31:20,787 - [INFO] - DONE! Đã xử lý 14 file.
+2026-07-17 17:33:54,308 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 17:33:54,309 - [INFO] - Tìm thấy 14 files từ data/processed!
+2026-07-17 17:33:54,324 - [INFO] - processing 116.2025.QH15.txt ...
+2026-07-17 17:33:54,346 - [INFO] - Đã lưu xong file data/processed/116.2025.QH15.txt vào data/cleaned!
+2026-07-17 17:33:54,347 - [INFO] - processing 179_2025_ND-CP_663165.txt ...
+2026-07-17 17:33:54,348 - [INFO] - Đã lưu xong file data/processed/179_2025_ND-CP_663165.txt vào data/cleaned!
+2026-07-17 17:33:54,349 - [INFO] - processing 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).txt ...
+2026-07-17 17:33:54,350 - [INFO] - Đã lưu xong file data/processed/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).txt vào data/cleaned!
+2026-07-17 17:33:54,350 - [INFO] - processing 24.2018.QH14. Luat An ninh mang.txt ...
+2026-07-17 17:33:54,364 - [INFO] - Đã lưu xong file data/processed/24.2018.QH14. Luat An ninh mang.txt vào data/cleaned!
+2026-07-17 17:33:54,365 - [INFO] - processing 48.2026.TT.BCA.txt ...
+2026-07-17 17:33:54,366 - [INFO] - Đã lưu xong file data/processed/48.2026.TT.BCA.txt vào data/cleaned!
+2026-07-17 17:33:54,366 - [INFO] - processing 53.2022.ND.CP.txt ...
+2026-07-17 17:33:54,386 - [INFO] - Đã lưu xong file data/processed/53.2022.ND.CP.txt vào data/cleaned!
+2026-07-17 17:33:54,386 - [INFO] - processing 60.2026.QĐ-UBND.txt ...
+2026-07-17 17:33:54,387 - [INFO] - Đã lưu xong file data/processed/60.2026.QĐ-UBND.txt vào data/cleaned!
+2026-07-17 17:33:54,387 - [INFO] - processing Chi thi so 24 - 2003 - CT-UB.txt ...
+2026-07-17 17:33:54,389 - [INFO] - Đã lưu xong file data/processed/Chi thi so 24 - 2003 - CT-UB.txt vào data/cleaned!
+2026-07-17 17:33:54,389 - [INFO] - processing QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).txt ...
+2026-07-17 17:33:54,403 - [INFO] - Đã lưu xong file data/processed/QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).txt vào data/cleaned!
+2026-07-17 17:33:54,403 - [INFO] - processing VanBanGoc_02_2026_QD-UBND_08012026-signed_01.txt ...
+2026-07-17 17:33:54,414 - [INFO] - Đã lưu xong file data/processed/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.txt vào data/cleaned!
+2026-07-17 17:33:54,414 - [INFO] - processing VanBanGoc_773.2025.NQ.HĐND.1.txt ...
+2026-07-17 17:33:54,415 - [INFO] - Đã lưu xong file data/processed/VanBanGoc_773.2025.NQ.HĐND.1.txt vào data/cleaned!
+2026-07-17 17:33:54,415 - [INFO] - processing VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.txt ...
+2026-07-17 17:33:54,426 - [INFO] - Đã lưu xong file data/processed/VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.txt vào data/cleaned!
+2026-07-17 17:33:54,426 - [INFO] - processing VanBanGoc_QD 40.2025 QC AN NINH MẠNG.txt ...
+2026-07-17 17:33:54,443 - [INFO] - Đã lưu xong file data/processed/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.txt vào data/cleaned!
+2026-07-17 17:33:54,444 - [INFO] - processing qd-33-2023.txt ...
+2026-07-17 17:33:54,450 - [INFO] - Đã lưu xong file data/processed/qd-33-2023.txt vào data/cleaned!
+2026-07-17 22:50:49,855 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 22:50:49,917 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 22:50:49,923 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 22:50:49,927 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 22:50:49,956 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 22:50:49,959 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 22:50:49,989 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 30 chunk.
+2026-07-17 22:50:49,992 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 22:50:49,993 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 22:50:50,000 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 22:50:50,002 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 3 chunk.
+2026-07-17 22:50:50,025 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 22:50:50,027 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 22:50:50,029 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 22:50:50,030 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 22:50:50,043 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 23:00:57,842 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 23:00:57,906 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 23:00:57,910 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 23:00:57,913 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 23:00:57,946 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 23:00:57,950 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 23:00:57,983 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 30 chunk.
+2026-07-17 23:00:57,985 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 23:00:57,987 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 23:00:57,994 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 23:00:57,996 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 3 chunk.
+2026-07-17 23:00:58,016 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 23:00:58,019 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 23:00:58,021 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 23:00:58,022 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 23:00:58,035 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 23:02:38,493 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 23:02:38,573 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 23:02:38,578 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 23:02:38,581 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 23:02:38,612 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 23:02:38,616 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,648 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 30 chunk.
+2026-07-17 23:02:38,651 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,653 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 23:02:38,658 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 23:02:38,660 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,689 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 23:02:38,691 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,693 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,696 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 23:02:38,708 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 23:02:52,382 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 23:02:52,397 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-17 23:03:18,870 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 23:03:18,933 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-17 23:03:18,937 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-17 23:03:18,941 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-17 23:03:18,976 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-17 23:03:18,981 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,010 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 30 chunk.
+2026-07-17 23:03:19,013 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,015 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-17 23:03:19,022 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-17 23:03:19,024 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,043 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-17 23:03:19,046 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,048 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,050 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-17 23:03:19,063 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
