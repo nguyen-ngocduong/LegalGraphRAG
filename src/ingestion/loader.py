@@ -1,5 +1,6 @@
 import pymupdf
 import docx
+from docx.oxml.ns import qn
 import os
 import logging
 import subprocess
@@ -39,15 +40,55 @@ class LoadData:
         except Exception as e:
             logging.error(f"Lỗi {e} khi đọc file {pdf_path}!")
             return
+    @staticmethod
+    def _read_table_as_text(table) -> str:
+        """
+        Chuyển nội dung một bảng Word thành text thuần,
+        mỗi hàng là một dòng, các ô cách nhau bằng ' | '.
+        Bỏ qua các ô trùng lặp do merged cells.
+        """
+        rows_text = []
+        for row in table.rows:
+            seen = set()
+            cells_text = []
+            for cell in row.cells:
+                cell_val = cell.text.strip()
+                # python-docx trả về ô merged nhiều lần → lọc trùng
+                if id(cell._tc) not in seen:
+                    seen.add(id(cell._tc))
+                    cells_text.append(cell_val)
+            row_line = " | ".join(cells_text)
+            if row_line.strip(" |"):
+                rows_text.append(row_line)
+        return "\n".join(rows_text)
+
     def load_docx(self, docx_path: str | Path) -> str:
         """
-        Load van ban tu file Word (.docx), chi lay text, ke ca ky tu dac biet
+        Load văn bản từ file Word (.docx).
+        Đọc đúng thứ tự xuất hiện trong tài liệu:
+        paragraph và table xen kẽ nhau (không đọc tất cả paragraph trước rồi mới đọc table).
         """
         try:
             doc = docx.Document(docx_path)
-            texts = '\n'.join([para.text.strip() for para in doc.paragraphs if para.text.strip()])
+            texts = []
+
+            # Duyệt qua các block-level element theo đúng thứ tự trong body
+            for block in doc.element.body:
+                # Paragraph
+                if block.tag == qn("w:p"):
+                    para = docx.text.paragraph.Paragraph(block, doc)
+                    text = para.text.strip()
+                    if text:
+                        texts.append(text)
+                # Table
+                elif block.tag == qn("w:tbl"):
+                    table = docx.table.Table(block, doc)
+                    table_text = self._read_table_as_text(table)
+                    if table_text:
+                        texts.append(table_text)
+
             logging.info(f"Đã đọc xong file {docx_path}")
-            return texts
+            return "\n".join(texts)
         except Exception as e:
             logging.error(f"Lỗi {e} khi đọc file {docx_path}!")
             return
@@ -136,7 +177,10 @@ class LoadData:
 if __name__ == "__main__":
     log()
     loader = LoadData()
-    #print(len(loader.get_file_from_raw_dir()))
-    #print(loader.load_doc(RAW_PATH + "/179_2025_ND-CP_663165.docx"))
+    # print(len(loader.get_file_from_raw_dir()))
+    # print("="*100)
+    # print(loader.load_doc(RAW_PATH + "/179_2025_ND-CP_663165.doc"))
+    # print("="*100)
+    # print(loader.load_docx(RAW_PATH + "/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).docx"))
     #print(loader.load_pdf(RAW_PATH + "/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.pdf"))
     loader.run()
