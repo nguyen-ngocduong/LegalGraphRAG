@@ -18,8 +18,16 @@ config = load_config()
 RAW_PATH = config['PATH']['RAW_PATH']
 PROCESSED_PATH = config['PATH']['PROCESSED_PATH']
 CLEAN_PATH = config['PATH']['CLEANED_PATH']
+CHUNK_PATH = config['PATH']['CHUNK_PATH']
 
 # === GEMINI API KEY ===
 
 config['KEY']['GEMINI_API_KEY'] = os.getenv('GEMINI_API_KEY')
 
+# === MODEL EMBEDDING ===
+MODEL_NAME = config['MODEL_NAME']['NAME']
+
+# CHUNK
+MIN_CHUNK_SIZE = config['CHUNK']['MIN_CHUNK_SIZE']
+MAX_CHUNK_SIZE = config['CHUNK']['MAX_CHUNK_SIZE']
+CHUNK_OVERLAP = config['CHUNK']['OVERLAP']
