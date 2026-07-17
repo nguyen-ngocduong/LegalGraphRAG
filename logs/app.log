@@ -784,4 +784,34 @@ Stacktrace:
 2026-07-16 22:15:44,814 - [INFO] - Đang tải xuống tài liệu: Nghị quyết số 773/2025/NQ-HĐND Quy định một số chính sách ưu đãi và hỗ trợ đầu tư vào lĩnh vực chuyển đổi số, an ninh mạng, bán dẫn, linh kiện điện tử, xây dựng phòng thí nghiệm, trung tâm đổi mới sáng tạo trên địa bàn tỉnh Hưng Yên giai đoạn từ năm 2025 đến năm 2030
 2026-07-16 22:15:45,593 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/nghi-quyet-so-773-2025-nq-hdnd-quy-dinh-mot-so-chinh-sach-uu-dai-va-ho-tro-dau-tu-vao-linh-vuc-chuyen-doi-so-an-ninh-mang-ban-dan-linh-kien-dien-tu-xay-dung-phong-thi-nghiem-trung-tam-doi-moi-sang-tao-tren-dia-ban-tinh-hung-yen-giai-doan-tu-nam-2025-den-nam-2030--184198?tabs=hien-thi-pdf
 2026-07-16 22:15:53,008 - [INFO] - Đang tải xuống tài liệu: Chỉ thị số 24/2003/CT-UB Tăng cường công tác bảo vệ an toàn, an ninh mạng lưới bưu chính viễn thông trên địa bàn tỉnh Lâm Đồng
-2026-07-16 22:15:53,750 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/chi-thi-so-24-2003-ct-ub-tang-cuong-cong-tac-bao-ve-an-toan-an-ninh-mang-luoi-buu-chinh-vien-thong-tren-dia-ban-tinh-lam-dong--74834?tabs=hien-thi-pdf
+2026-07-16 22:15:53,750 - [INFO] - Link tài liệu: https://vbpl.vn/van-ban/chi-tiet/chi-thi-so-24-2003-ct-ub-tang-cuong-cong-tac-bao-ve-an-toan-an-ninh-mang-luoi-buu-chinh-vien-thong-tren-dia-ban-tinh-lam-dong--74834?tabs=hien-thi-pdf2026-07-17 09:41:03,246 - [INFO] - ==================== START LOGGING ====================
+2026-07-17 09:41:03,247 - [INFO] - Đã lấy tất cả các file từ data/raw - có 14 file tất cả!!
+2026-07-17 09:41:03,442 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.pdf
+2026-07-17 09:41:03,444 - [INFO] - Đã lưu file: data/processed/VanBanGoc_02_2026_QD-UBND_08012026-signed_01.txt
+2026-07-17 09:41:04,964 - [INFO] - Đã đọc xong file /tmp/tmpn5hnzf7m/60.2026.QĐ-UBND.docx
+2026-07-17 09:41:04,965 - [INFO] - Đã lưu file: data/processed/60.2026.QĐ-UBND.txt
+2026-07-17 09:41:05,075 - [INFO] - Đã đọc xong file data/raw/qd-33-2023.docx
+2026-07-17 09:41:05,076 - [INFO] - Đã lưu file: data/processed/qd-33-2023.txt
+2026-07-17 09:41:05,099 - [INFO] - Đã đọc xong file data/raw/48.2026.TT.BCA.docx
+2026-07-17 09:41:05,100 - [INFO] - Đã lưu file: data/processed/48.2026.TT.BCA.txt
+2026-07-17 09:41:05,131 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_773.2025.NQ.HĐND.1.pdf
+2026-07-17 09:41:05,133 - [INFO] - Đã lưu file: data/processed/VanBanGoc_773.2025.NQ.HĐND.1.txt
+2026-07-17 09:41:07,149 - [INFO] - Đã đọc xong file /tmp/tmpyxrcbag9/24.2018.QH14. Luat An ninh mang.docx
+2026-07-17 09:41:07,150 - [INFO] - Đã lưu file: data/processed/24.2018.QH14. Luat An ninh mang.txt
+2026-07-17 09:41:07,240 - [INFO] - Đã đọc xong file data/raw/QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).docx
+2026-07-17 09:41:07,240 - [INFO] - Đã lưu file: data/processed/QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH).txt
+2026-07-17 09:41:07,306 - [INFO] - Đã đọc xong file data/raw/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).docx
+2026-07-17 09:41:07,306 - [INFO] - Đã lưu file: data/processed/24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký).txt
+2026-07-17 09:41:08,781 - [INFO] - Đã đọc xong file /tmp/tmp9pji1jbq/179_2025_ND-CP_663165.docx
+2026-07-17 09:41:08,782 - [INFO] - Đã lưu file: data/processed/179_2025_ND-CP_663165.txt
+2026-07-17 09:41:10,902 - [INFO] - Đã đọc xong file /tmp/tmpigbskcwh/53.2022.ND.CP.docx
+2026-07-17 09:41:10,903 - [INFO] - Đã lưu file: data/processed/53.2022.ND.CP.txt
+2026-07-17 09:41:11,210 - [INFO] - Đã đọc xong file data/raw/116.2025.QH15.docx
+2026-07-17 09:41:11,211 - [INFO] - Đã lưu file: data/processed/116.2025.QH15.txt
+2026-07-17 09:41:12,795 - [INFO] - Đã đọc xong file /tmp/tmpvwr9j66z/Chi thi so 24 - 2003 - CT-UB.docx
+2026-07-17 09:41:12,800 - [INFO] - Đã lưu file: data/processed/Chi thi so 24 - 2003 - CT-UB.txt
+2026-07-17 09:41:13,246 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.pdf
+2026-07-17 09:41:13,250 - [INFO] - Đã lưu file: data/processed/VanBanGoc_QD 40.2025 QC AN NINH MẠNG.txt
+2026-07-17 09:41:13,531 - [INFO] - Đã đọc xong file data/raw/VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.pdf
+2026-07-17 09:41:13,533 - [INFO] - Đã lưu file: data/processed/VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed.txt
+2026-07-17 09:41:13,533 - [INFO] - DONE! Đã xử lý 14 file.

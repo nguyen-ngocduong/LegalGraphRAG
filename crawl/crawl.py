@@ -16,7 +16,7 @@ output_path = RAW_PATH
 from time import sleep
 def log():
     logging.basicConfig(
-        #filename = "logs/app.log",
+        filename = "logs/app.log",
         level=logging.INFO,
         format="%(asctime)s - [%(levelname)s] - %(message)s",
     )
