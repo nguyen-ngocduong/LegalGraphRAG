@@ -11,14 +11,15 @@ Cấu trúc phân cấp:
 Các rule chính:
     Rule 1: Điều ngắn (<= MAX_CHUNK_SIZE) -> giữ nguyên 1 chunk.
     Rule 2: Điều dài -> tách theo Khoản.
-    Rule 3: Khoản quá dài -> fallback dùng RecursiveCharacterTextSplitter.
-    Rule 4: Khoản quá ngắn -> merge với unit liền kề (cùng Điều).
-    Rule 5: Điều rất ngắn vẫn giữ nguyên, không merge sang Điều khác.
-    Rule 6: Văn bản không có Điều -> Paragraph/Sentence chunking.
+    Rule 3: Khoản quá dài -> tách theo Điểm (a, b, c, đ, e...).
+    Rule 4: Khoản/Điểm quá dài -> fallback dùng RecursiveCharacterTextSplitter.
+    Rule 5: Khoản quá ngắn -> merge với unit liền kề (cùng Điều).
+    Rule 6: Điều rất ngắn vẫn giữ nguyên, không merge sang Điều khác.
+    Rule 7: Văn bản không có Điều -> Paragraph/Sentence chunking.
 
-    + Overlap chỉ áp dụng khi splitter cắt Khoản dài (Rule 3).
-    + Metadata đầy đủ theo jsonl_schema.md.
+    + Overlap chỉ áp dụng khi splitter cắt Khoản/Điểm dài (Rule 4).
     + Embedding text = prefix ngữ cảnh + nội dung chunk.
+    + Header Điều luôn được giữ trong content của mọi chunk con.
 """
 
 from __future__ import annotations
@@ -131,9 +132,10 @@ class RecursiveCharacterTextSplitter:
 # Regex Patterns
 # ==============================================================
 
-# Chương I / Chương II / Chương III ... -> group(1) = "I", group(2) = "NHỮNG QUY ĐỊNH CHUNG"
-CHAPTER_PATTERN = re.compile(r"(?im)^\s*Chương\s+([IVXLCDM0-9]+)\s*$")
-CHAPTER_TITLE_NEXT = True  # title nằm ở dòng tiếp theo
+# FIX 6: Capture title cùng dòng "Chương I NHỮNG QUY ĐỊNH CHUNG"
+# group(1) = số chương "I", group(2) = title cùng dòng (optional)
+CHAPTER_PATTERN = re.compile(r"(?im)^\s*Chương\s+([IVXLCDM0-9]+)(?:\s+(.+))?\s*$")
+CHAPTER_TITLE_NEXT = True  # fallback: title nằm ở dòng tiếp theo nếu group(2) rỗng
 
 # Mục 1 / Mục 2 ...
 SECTION_PATTERN = re.compile(r"(?im)^\s*Mục\s+([IVXLCDM0-9]+)\s*$")
@@ -143,6 +145,9 @@ ARTICLE_PATTERN = re.compile(r"(?im)^\s*Điều\s+(\d+)(?:\.\s*(.*))?\s*$")
 
 # 1. / 2. / 3. ... (Khoản)
 CLAUSE_PATTERN = re.compile(r"(?m)^\s*(\d+)\.\s+")
+
+# FIX 3: Thêm pattern cho Điểm a) b) c) đ) e)...
+POINT_PATTERN = re.compile(r"(?m)^\s*([a-zđ])\)\s+")
 
 WORD_PATTERN = re.compile(r"\S+")
 
@@ -162,15 +167,18 @@ REFERENCE_PATTERNS = [
     re.compile(r"Quyết\s+định\s+số\s+(\d+/\d+/QĐ-\w+)"),
 ]
 
+# FIX 2: Sửa entity patterns tránh false positive
 ENTITY_ORGANIZATION_PATTERNS = [
-    # Bộ + ngành (capture ngắn gọn)
+    # Bộ + ngành (capture tên ngành)
     re.compile(r"Bộ\s+(Công an|Quốc phòng|Thông tin và Truyền thông|Tài chính|Nội vụ|Khoa học và Công nghệ|Tư pháp|Ngoại giao|Xây dựng|Giao thông vận tải)"),
-    # Cơ quan ngắn gọn
+    # Cơ quan cấp trung ương
     re.compile(r"\b(Chính phủ|Quốc hội|Hiến pháp)\b"),
-    # Ủy ban nhân dân + tỉnh (chỉ lấy tên tỉnh)
-    re.compile(r"Ủy ban nhân dân\s+(?:tỉnh\s+)?(\w+(?:\s+\w+){0,2})"),
-    # Công an + tỉnh
-    re.compile(r"Công an\s+(?:tỉnh\s+)?(\w+(?:\s+\w+){0,1})"),
+    # FIX 2: "Công an nhân dân" là entity riêng — tách ra pattern độc lập
+    re.compile(r"\b(Công an nhân dân)\b"),
+    # FIX 2: Ủy ban nhân dân — bắt buộc có "tỉnh" hoặc "thành phố", capture tên tỉnh
+    re.compile(r"Ủy ban nhân dân\s+(?:tỉnh|thành phố)\s+(\w+(?:\s+\w+){0,2})"),
+    # FIX 2: Công an + tỉnh — chỉ match khi có "tỉnh" rõ ràng
+    re.compile(r"Công an\s+tỉnh\s+(\w+(?:\s+\w+){0,1})"),
     # Sở + ngành
     re.compile(r"Sở\s+(Thông tin và Truyền thông|Khoa học và Công nghệ|Tài chính|Tư pháp|Kế hoạch và Đầu tư|Y tế|Giáo dục và Đào tạo|Nông nghiệp và Phát triển nông thôn)"),
     # Cục
@@ -186,7 +194,7 @@ ENTITY_ORGANIZATION_PATTERNS = [
 class ArticleBlock:
     document_id: str
     chapter: str | None          # Roman numeral only: "I", "II"
-    chapter_title: str | None    # Title next line: "NHỮNG QUY ĐỊNH CHUNG"
+    chapter_title: str | None    # Title: "NHỮNG QUY ĐỊNH CHUNG"
     section: str | None
     section_title: str | None
     article_number: str
@@ -224,6 +232,8 @@ class Chunk:
     article_title: str = ""
 
     clause_number: int | None = None
+    # FIX 8: Thêm field point_letter cho metadata Điểm
+    point_letter: str = ""       # "a", "b", "c", "đ", "e"... — rỗng nếu không phải chunk Điểm
 
     # Chunk Content
     content: str = ""
@@ -233,7 +243,7 @@ class Chunk:
     # Semantic Metadata
     references: List[str] = field(default_factory=list)
     defined_terms: List[str] = field(default_factory=list)
-    keywords: List[str] = field(default_factory=list)  # always empty for now
+    keywords: List[str] = field(default_factory=list)   # always empty for now
     entities: List[str] = field(default_factory=list)
 
     def metadata(self) -> Dict[str, Any]:
@@ -250,6 +260,7 @@ class Chunk:
             "article_number": self.article_number,
             "article_title": self.article_title,
             "clause_number": self.clause_number,
+            "point_letter": self.point_letter,
             "references": self.references,
             "defined_terms": self.defined_terms,
             "keywords": self.keywords,
@@ -278,6 +289,8 @@ class Chunk:
             prefix.append(art_text)
         if self.clause_number is not None:
             prefix.append(f"Khoản {self.clause_number}")
+        if self.point_letter:
+            prefix.append(f"Điểm {self.point_letter})")
         return "\n".join(prefix) + "\n\n" + self.content
 
     def to_json(self) -> Dict[str, Any]:
@@ -306,7 +319,6 @@ class MetadataExtractor:
         for pattern in REFERENCE_PATTERNS:
             for match in pattern.finditer(text):
                 ref = match.group(0).strip().rstrip(".")
-                # Loại bỏ refs quá ngắn hoặc quá dài (noise)
                 if len(ref) < 10 or len(ref) > 120:
                     continue
                 if ref not in seen:
@@ -320,9 +332,11 @@ class MetadataExtractor:
         seen: set[str] = set()
         for pattern in ENTITY_ORGANIZATION_PATTERNS:
             for match in pattern.finditer(text):
-                # Lấy group(1) nếu có (tên cụ thể), nếu không lấy group(0)
-                entity = match.group(1).strip() if match.lastindex and match.group(1) else match.group(0).strip()
-                # Chỉ lấy entity ngắn gọn (không lấy cả câu)
+                entity = (
+                    match.group(1).strip()
+                    if match.lastindex and match.group(1)
+                    else match.group(0).strip()
+                )
                 if len(entity) < 4 or len(entity) > 60:
                     continue
                 if entity not in seen:
@@ -333,16 +347,17 @@ class MetadataExtractor:
     @staticmethod
     def extract_defined_terms(text: str) -> list[str]:
         terms: list[str] = []
-        # Tìm section "Giải thích từ ngữ" hoặc "các từ ngữ dưới đây được hiểu như sau"
+        # FIX: Mở rộng pattern tìm section định nghĩa thuật ngữ
         term_section_match = re.search(
-            r"(?:Giải thích từ ngữ|các từ ngữ dưới đây được hiểu như sau)[:\s]*\n(.*?)(?=\n(?:Điều|Chương|Mục|\d+\.\s+[A-Z])|\Z)",
+            r"(?:Giải thích từ ngữ|các từ ngữ dưới đây được hiểu như sau"
+            r"|Định nghĩa|Thuật ngữ)[:\s]*\n"
+            r"(.*?)(?=\n(?:Điều|Chương|Mục|\d+\.\s+[A-Z])|\Z)",
             text,
             re.DOTALL | re.IGNORECASE,
         )
         if not term_section_match:
             return terms
         section_text = term_section_match.group(1)
-        # Match: "1. Term là ..." hoặc "1. Term:"
         term_matches = re.finditer(
             r"(?:^|\n)\s*\d+\.\s+([^:=\n]{2,60}?)\s*(?:là|được hiểu|:\s)",
             section_text,
@@ -350,7 +365,6 @@ class MetadataExtractor:
         )
         for m in term_matches:
             term = m.group(1).strip()
-            # Loại bỏ term quá ngắn hoặc quá dài
             if term and 3 <= len(term) <= 60:
                 terms.append(term)
         return terms
@@ -418,12 +432,12 @@ class SemanticChunk:
     # ----------------------------------------------------------
 
     _DOC_TYPE_RULES: list[tuple[re.Pattern, str]] = [
-        (re.compile(r"QH\d+|luat|luật", re.IGNORECASE),           "Luật"),
-        (re.compile(r"NĐ-CP|ND-CP|NĐ\.CP|ND\.CP", re.IGNORECASE), "Nghị định"),
-        (re.compile(r"TT-\w+|TT\.\w+", re.IGNORECASE),            "Thông tư"),
-        (re.compile(r"NQ-\w+|NQ\.\w+", re.IGNORECASE),            "Nghị quyết"),
-        (re.compile(r"CT-\w+|CT\.\w+", re.IGNORECASE),            "Chỉ thị"),
-        (re.compile(r"QĐ-\w+|QD-\w+|QĐ\.\w+", re.IGNORECASE),   "Quyết định"),
+        (re.compile(r"QH\d+|luat|luật", re.IGNORECASE),            "Luật"),
+        (re.compile(r"NĐ-CP|ND-CP|NĐ\.CP|ND\.CP", re.IGNORECASE),  "Nghị định"),
+        (re.compile(r"TT-\w+|TT\.\w+", re.IGNORECASE),             "Thông tư"),
+        (re.compile(r"NQ-\w+|NQ\.\w+", re.IGNORECASE),             "Nghị quyết"),
+        (re.compile(r"CT-\w+|CT\.\w+", re.IGNORECASE),             "Chỉ thị"),
+        (re.compile(r"QĐ-\w+|QD-\w+|QĐ\.\w+", re.IGNORECASE),    "Quyết định"),
     ]
 
     def _detect_doc_type(self, document_id: str) -> str:
@@ -439,35 +453,39 @@ class SemanticChunk:
     def _extract_document_name(self, text: str, document_id: str) -> str:
         """
         Tìm tên văn bản trong 30 dòng đầu.
-        Ưu tiên: dòng có từ khóa loại VB + tiêu đề (KHÔNG chứa '|').
+        Ưu tiên: dòng có từ khóa loại VB + tiêu đề ngay dòng tiếp theo.
+        FIX 5: Thêm skip_words_re để bỏ qua "SỐ", "NGÀY", "CĂN CỨ"...
+                sau dòng type, tránh nhầm thành title.
         """
         lines = text.splitlines()
 
-        # Pattern 1: "LUẬT\nAN NINH MẠNG" (2 dòng riêng) hoặc "THÔNG TƯ\n..."
         vb_type_re = re.compile(
             r"^(LUẬT|NGHỊ ĐỊNH|THÔNG TƯ|QUYẾT ĐỊNH|NGHỊ QUYẾT|CHỈ THỊ|QUY CHẾ)$",
             re.IGNORECASE,
         )
+        # FIX 5: Các từ đứng đầu dòng không được coi là title
+        skip_words_re = re.compile(
+            r"^(SỐ|NGÀY|THÁNG|NĂM|CĂN CỨ|THEO|CHÍNH PHỦ)\b",
+            re.IGNORECASE,
+        )
+
         for i, line in enumerate(lines[:30]):
             line_stripped = line.strip()
             if vb_type_re.match(line_stripped):
-                # Lấy tên = dòng type + dòng tiếp theo (nếu có và không phải structural)
                 title_parts = [line_stripped]
                 if i + 1 < len(lines):
                     next_line = lines[i + 1].strip()
-                    if next_line and not vb_type_re.match(next_line) and len(next_line) <= 200:
+                    if (
+                        next_line
+                        and not vb_type_re.match(next_line)
+                        and not skip_words_re.match(next_line)
+                        and len(next_line) <= 200
+                        and "|" not in next_line
+                    ):
                         title_parts.append(next_line)
                 return " ".join(title_parts)
 
-        # Pattern 2: Dòng có dạng "THÔNG TƯ\nBan hành Quy chuẩn..." (type + subtitle)
-        for i, line in enumerate(lines[:30]):
-            line_stripped = line.strip()
-            if vb_type_re.match(line_stripped) and i + 1 < len(lines):
-                next_line = lines[i + 1].strip()
-                if next_line and len(next_line) >= 10 and len(next_line) <= 200:
-                    return f"{line_stripped} {next_line}"
-
-        # Fallback: tìm dòng có chứa số hiệu văn bản dạng "Số: XX/YYYY/..."
+        # Fallback: tìm dòng có số hiệu văn bản "Số: XX/YYYY/..."
         so_hieu_re = re.compile(r"Số:\s*(\d+/\d+/\w+[-\w]*)")
         for line in lines[:30]:
             m = so_hieu_re.search(line)
@@ -523,7 +541,12 @@ class SemanticChunk:
 
             # Chờ title cho Chapter (dòng tiếp theo sau "Chương X")
             if pending_chapter:
-                if line and not CHAPTER_PATTERN.match(line) and not ARTICLE_PATTERN.match(line) and not SECTION_PATTERN.match(line):
+                if (
+                    line
+                    and not CHAPTER_PATTERN.match(line)
+                    and not ARTICLE_PATTERN.match(line)
+                    and not SECTION_PATTERN.match(line)
+                ):
                     current_chapter_title = line.strip()
                     pending_chapter = False
                     continue
@@ -531,7 +554,12 @@ class SemanticChunk:
                     pending_chapter = False
 
             if pending_section:
-                if line and not SECTION_PATTERN.match(line) and not ARTICLE_PATTERN.match(line) and not CHAPTER_PATTERN.match(line):
+                if (
+                    line
+                    and not SECTION_PATTERN.match(line)
+                    and not ARTICLE_PATTERN.match(line)
+                    and not CHAPTER_PATTERN.match(line)
+                ):
                     current_section_title = line.strip()
                     pending_section = False
                     continue
@@ -547,11 +575,17 @@ class SemanticChunk:
             chapter_match = CHAPTER_PATTERN.match(line)
             if chapter_match:
                 flush_current_article()
-                current_chapter = chapter_match.group(1).strip()  # Roman numeral only
-                current_chapter_title = None
+                current_chapter = chapter_match.group(1).strip()
                 current_section = None
                 current_section_title = None
-                pending_chapter = True
+                # FIX 6: Capture title cùng dòng nếu có, else chờ dòng tiếp theo
+                inline_title = chapter_match.group(2)
+                if inline_title and inline_title.strip():
+                    current_chapter_title = inline_title.strip()
+                    pending_chapter = False
+                else:
+                    current_chapter_title = None
+                    pending_chapter = True
                 continue
 
             # Check Section
@@ -581,32 +615,40 @@ class SemanticChunk:
         return articles
 
     # ----------------------------------------------------------
-    # Split: tách Khoản, tách block dài, gom block ngắn
+    # Split: tách Khoản, tách Điểm, tách block dài, gom block ngắn
     # ----------------------------------------------------------
 
-    def _split_clause_blocks(self, article: ArticleBlock) -> list[str]:
-        body = self._normalize_text(article.body_text)
-        if not body:
+    def _split_by_pattern(self, text: str, pattern: re.Pattern) -> list[str]:
+        """Generic split theo regex pattern (dùng cho Khoản hoặc Điểm)."""
+        if not text:
             return []
-
-        matches = list(CLAUSE_PATTERN.finditer(body))
+        matches = list(pattern.finditer(text))
         if not matches:
-            return [body]
+            return [text]
 
         blocks: list[str] = []
         first_start = matches[0].start()
-        intro = body[:first_start].strip()
+        intro = text[:first_start].strip()
         if intro:
             blocks.append(intro)
 
         for index, match in enumerate(matches):
             start = match.start()
-            end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
-            block = body[start:end].strip()
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+            block = text[start:end].strip()
             if block:
                 blocks.append(block)
 
-        return blocks or [body]
+        return blocks or [text]
+
+    def _split_clause_blocks(self, article: ArticleBlock) -> list[str]:
+        """Tách body của Điều thành các Khoản."""
+        body = self._normalize_text(article.body_text)
+        return self._split_by_pattern(body, CLAUSE_PATTERN)
+
+    def _split_point_blocks(self, clause_text: str) -> list[str]:
+        """FIX 3: Tách Khoản thành các Điểm (a, b, c, đ, e...)."""
+        return self._split_by_pattern(clause_text, POINT_PATTERN)
 
     def _split_long_block(self, block: str) -> list[str]:
         if self._token_count(block) <= self.max_chunk_size:
@@ -633,31 +675,28 @@ class SemanticChunk:
             unit = unit.strip()
             if not unit:
                 continue
-
             unit_size = self._token_count(unit)
-
             if not current_parts:
                 current_parts = [unit]
                 current_size = unit_size
                 continue
-
             if current_size + unit_size <= self.max_chunk_size:
                 current_parts.append(unit)
                 current_size += unit_size
                 continue
-
             flush_current()
             current_parts = [unit]
             current_size = unit_size
 
         flush_current()
 
-        # Gom tail quá ngắn
+        # FIX 7: Gom tail quá ngắn — giữ thứ tự, chỉ gom vào chunk trước đó
         if len(chunks) >= 2 and self._token_count(chunks[-1]) < self.min_chunk_size:
             tail = chunks.pop()
             if self._token_count(chunks[-1]) + self._token_count(tail) <= self.max_chunk_size:
                 chunks[-1] = f"{chunks[-1]}\n{tail}".strip()
             else:
+                # Không gom được — giữ nguyên tail làm chunk riêng (không đảo thứ tự)
                 chunks.append(tail)
 
         return chunks
@@ -680,7 +719,9 @@ class SemanticChunk:
         article_number: str | None,
         article_title: str,
         clause_number: int | None,
-        doc_type: str,
+        # FIX 8: Thêm point_letter vào signature
+        point_letter: str = "",
+        doc_type: str = "",
         references: list[str] | None = None,
         defined_terms: list[str] | None = None,
         entities: list[str] | None = None,
@@ -698,6 +739,7 @@ class SemanticChunk:
             article_number=int(article_number) if article_number else None,
             article_title=article_title,
             clause_number=clause_number,
+            point_letter=point_letter,
             content=content,
             token_count=token_count,
             references=references or [],
@@ -724,11 +766,8 @@ class SemanticChunk:
         doc_entities = doc_metadata["entities"]
         doc_terms = doc_metadata["defined_terms"]
 
-        # Lọc refs liên quan đến article cụ thể
-        article_refs = [
-            r for r in doc_refs
-            if r in article_text or any(kw in article_text for kw in r.split()[:2])
-        ] or doc_refs[:5]
+        # Header dùng để prefix vào chunk con (fix 1)
+        article_header = article.article_header.strip()
 
         common = dict(
             document_id=article.document_id,
@@ -740,13 +779,14 @@ class SemanticChunk:
             article_number=article.article_number,
             article_title=article.article_title,
             doc_type=doc_type,
-            references=article_refs,
             defined_terms=doc_terms,
             entities=doc_entities,
         )
 
         # Rule 1: Điều vừa vặn -> 1 chunk
         if article_size <= self.max_chunk_size:
+            # FIX 4: Lọc refs thực sự xuất hiện trong article; fallback doc_refs[:3]
+            chunk_refs = [r for r in doc_refs if r in article_text] or doc_refs[:3]
             return [
                 self._make_chunk(
                     **common,
@@ -754,28 +794,83 @@ class SemanticChunk:
                     content=article_text,
                     token_count=article_size,
                     clause_number=None,
+                    point_letter="",
+                    references=chunk_refs,
                 )
             ]
 
-        # Rule 2 & 3: Điều dài -> tách Khoản
+        # Rule 2 & 3: Điều dài -> tách Khoản -> tách Điểm nếu cần
         clause_blocks = self._split_clause_blocks(article)
-        normalized_units: list[str] = []
-        for block in clause_blocks:
-            normalized_units.extend(self._split_long_block(block))
 
-        packed_units = self._pack_units(normalized_units)
+        # BUG FIX: Mỗi unit mang theo (text, clause_num, point_letter) để map đúng metadata
+        # sau khi _pack_units gộp lại.
+        # normalized_units: list of (text, clause_num, point_letter)
+        normalized_units: list[tuple[str, int | None, str]] = []
+
+        has_multiple_clauses = len(clause_blocks) > 1
+        for clause_idx, clause_block in enumerate(clause_blocks):
+            clause_num = clause_idx + 1 if has_multiple_clauses else None
+
+            if self._token_count(clause_block) > self.max_chunk_size:
+                # FIX 3: Tách theo Điểm trước khi dùng RecursiveCharacterTextSplitter
+                point_blocks = self._split_point_blocks(clause_block)
+                if len(point_blocks) > 1:
+                    for point_block in point_blocks:
+                        # Extract point letter từ đầu block
+                        pm = POINT_PATTERN.match(point_block)
+                        pt_letter = pm.group(1) if pm else ""
+                        for piece in self._split_long_block(point_block):
+                            normalized_units.append((piece, clause_num, pt_letter))
+                    continue
+
+            # Không tách được theo Điểm (hoặc Khoản vừa) -> split thẳng nếu cần
+            for piece in self._split_long_block(clause_block):
+                normalized_units.append((piece, clause_num, ""))
+
+        # Pack các units lại
+        texts_only = [u[0] for u in normalized_units]
+        packed_texts = self._pack_units(texts_only)
+
+        # BUG FIX: Rebuild mapping từ packed_texts -> (clause_num, point_letter)
+        # Duyệt normalized_units song song để tìm unit đầu tiên của mỗi packed chunk,
+        # thay vì dùng text_idx đơn giản (sai khi một packed chunk chứa nhiều units).
+        unit_idx = 0
         chunks: list[Chunk] = []
-        n = len(packed_units)
-        for index, chunk_text in enumerate(packed_units):
+        for packed_text in packed_texts:
+            # Xác định clause_num và point_letter của unit đầu tiên trong packed chunk
+            clause_num: int | None = None
+            pt_letter: str = ""
+            if unit_idx < len(normalized_units):
+                _, clause_num, pt_letter = normalized_units[unit_idx]
+
+            # FIX 1: Thêm header Điều vào đầu content của chunk con nếu chưa có
+            content = packed_text
+            if article_header and not content.startswith(article_header):
+                content = f"{article_header}\n{content}"
+
+            # FIX 4: Lọc refs xuất hiện trong chunk này; fallback doc_refs[:3]
+            chunk_refs = [r for r in doc_refs if r in content] or doc_refs[:3]
+
             chunks.append(
                 self._make_chunk(
                     **common,
-                    chunk_index=index,
-                    content=chunk_text,
-                    token_count=self._token_count(chunk_text),
-                    clause_number=index + 1 if n > 1 else None,
+                    chunk_index=unit_idx,
+                    content=content,
+                    token_count=self._token_count(content),
+                    clause_number=clause_num,
+                    point_letter=pt_letter,
+                    references=chunk_refs,
                 )
             )
+
+            # Advance unit_idx: đếm bao nhiêu normalized_units đã được pack vào chunk này
+            # bằng cách tích luỹ tokens đến khi khớp với packed_text (xấp xỉ)
+            packed_size = self._token_count(packed_text)
+            consumed = 0
+            while unit_idx < len(normalized_units) and consumed < packed_size:
+                consumed += self._token_count(normalized_units[unit_idx][0])
+                unit_idx += 1
+
         return chunks
 
     def _fallback_chunk_document(
@@ -794,6 +889,7 @@ class SemanticChunk:
         if not paragraphs:
             return []
 
+        doc_refs = doc_metadata["references"]
         packed = self._pack_units(
             [piece for paragraph in paragraphs for piece in self._split_long_block(paragraph)]
         )
@@ -811,8 +907,10 @@ class SemanticChunk:
                 article_number=None,
                 article_title="",
                 clause_number=None,
+                point_letter="",
                 doc_type=doc_type,
-                references=doc_metadata["references"][:5],
+                # FIX 4: Lọc refs per-chunk; fallback doc_refs[:3]
+                references=[r for r in doc_refs if r in chunk_text] or doc_refs[:3],
                 defined_terms=doc_metadata["defined_terms"],
                 entities=doc_metadata["entities"],
             )
@@ -860,7 +958,7 @@ class SemanticChunk:
                     )
                 )
 
-        # Gán chunk_id global
+        # Gán chunk_id global ổn định theo document
         for global_idx, chunk in enumerate(chunks):
             chunk.chunk_id = f"{document_id}__chunk_{global_idx:04d}"
             chunk.context = chunk.build_context()
