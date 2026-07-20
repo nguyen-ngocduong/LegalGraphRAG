@@ -379,3 +379,19 @@
 2026-07-17 23:03:19,048 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
 2026-07-17 23:03:19,050 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
 2026-07-17 23:03:19,063 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
+2026-07-20 15:19:57,933 - [INFO] - ==================== START LOGGING ====================
+2026-07-20 15:19:57,996 - [INFO] - Đã tạo 116.2025.QH15_clean.jsonl với 49 chunk.
+2026-07-20 15:19:58,001 - [INFO] - Đã tạo 179_2025_ND-CP_663165_clean.jsonl với 8 chunk.
+2026-07-20 15:19:58,006 - [INFO] - Đã tạo 24. NQ_hỗ trợ người làm công tác chuyển đổi số (trình ký)_clean.jsonl với 7 chunk.
+2026-07-20 15:19:58,042 - [INFO] - Đã tạo 24.2018.QH14. Luat An ninh mang_clean.jsonl với 43 chunk.
+2026-07-20 15:19:58,046 - [INFO] - Đã tạo 48.2026.TT.BCA_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,078 - [INFO] - Đã tạo 53.2022.ND.CP_clean.jsonl với 30 chunk.
+2026-07-20 15:19:58,081 - [INFO] - Đã tạo 60.2026.QĐ-UBND_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,083 - [WARNING] - Không tìm thấy Điều trong file Chi thi so 24 - 2003 - CT-UB_clean.txt, dùng fallback theo đoạn.
+2026-07-20 15:19:58,090 - [INFO] - Đã tạo Chi thi so 24 - 2003 - CT-UB_clean.jsonl với 2 chunk.
+2026-07-20 15:19:58,092 - [INFO] - Đã tạo QUYET DINH QUY CHE QUAN LY KHAI THAC AN  NINH MANG (BAN HANH)_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,110 - [INFO] - Đã tạo VanBanGoc_02_2026_QD-UBND_08012026-signed_01_clean.jsonl với 35 chunk.
+2026-07-20 15:19:58,113 - [INFO] - Đã tạo VanBanGoc_773.2025.NQ.HĐND.1_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,116 - [INFO] - Đã tạo VanBanGoc_File ky 29 1 QD ban hanh Quy che An ninh mang nxhai 30010844 docx signed.signed.signed.signed.signed_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,117 - [INFO] - Đã tạo VanBanGoc_QD 40.2025 QC AN NINH MẠNG_clean.jsonl với 3 chunk.
+2026-07-20 15:19:58,131 - [INFO] - Đã tạo qd-33-2023_clean.jsonl với 17 chunk.
