@@ -3,12 +3,13 @@ PATH:
   PROCESSED_PATH: data/processed
   CLEANED_PATH: data/cleaned
   CHUNK_PATH: data/chunked
+  GRAPH_PATH: data/graph
 KEY:
   GEMINI_API_KEY: ${GEMINI_API_KEY}
 
 MODEL_NAME:
   NAME: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
-
+  GRAPH: qwen2.5:3b
 CHUNK:
   MAX_CHUNK_SIZE: 1000
   MIN_CHUNK_SIZE: 500
